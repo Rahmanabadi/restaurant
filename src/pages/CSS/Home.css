@@ -1,0 +1,43 @@
+.icon-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.icon-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.icon-item {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.icon-item p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.image-block {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.image-block.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+  .icon-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}

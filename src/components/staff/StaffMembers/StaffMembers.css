@@ -1,0 +1,244 @@
+
+.container {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 1200px;
+  flex: 1;
+
+}
+.history-section {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 2s ease-out, transform 0.8s ease-out;
+}
+
+.history-section.visible {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0s;
+}
+
+.owner-section {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 2s ease-out, transform 0.8s ease-out;
+}
+
+.owner-section.visible {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 1s;
+}
+
+.staff-member{
+  border: none !important;
+}
+
+.manager-section {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 2s ease-out, transform 0.8s ease-out;
+}
+
+.manager-section.visible {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 1s;
+}
+
+.staff-members-section {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 2s ease-out, transform 0.8s ease-out;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.staff-members-section.visible {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 1s;
+}
+
+.staff-member {
+  flex: 1 1 calc(25% - 20px);
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  border: 0px !important;
+}
+
+.staff-member img {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.staff-rounded-circle{
+  border-radius: 5px;
+}
+
+.paymentTitles{
+  margin-top: 50px;
+}
+
+.icon-container{
+  margin-bottom: 50px;
+}
+.fas{
+  margin: 30px;
+}
+.text-section p{
+  font-size: 20px;
+}
+
+.text-section {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 4s ease-out, transform 0.8s ease-out;
+}
+
+.text-section.visible {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 1s;
+}
+
+.paymentTitles {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 4s ease-out, transform 0.8s ease-out;
+}
+
+.paymentTitles.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1s;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 4s ease-out, transform 0.8s ease-out;
+}
+
+.icon-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1s;
+}
+
+.icon-container i {
+  font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .icon-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+@media (max-width: 768px) {
+  .staff-member {
+    flex: 1 1 calc(50% - 20px);
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .staff-member {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+@media(max-width:549px){
+  
+  .owner-section {
+    margin-top: 50px;
+  }
+  
+  .owner-section h1 {
+    margin: 0; 
+    font-size: 30px;
+  }
+  
+  .owner-section img {
+    border-radius: 3% !important;
+    width: 250px;
+    margin-top: 20px;
+  }
+  
+  .manager-section {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .manager-section h2 {
+    font-size: 25px;
+    margin: 0; 
+  }
+  
+  .manager-section img {
+    border-radius: 3% !important;
+    width: 250px;
+    margin-top: 20px;
+  }
+}
+@media (min-width: 550px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .owner-section {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    width: 100%;
+    padding-left: 20%; 
+    margin-top: 50px;
+  }
+  
+  .owner-section h1 {
+    margin-bottom: 20px; 
+  }
+  
+  .owner-section img {
+    border-radius: 3% !important;
+    width: 300px;
+  }
+  
+  .manager-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    width: 100%;
+    padding-right: 20%;
+    margin-left: 50px;
+    
+  }
+  
+  .manager-section h2 {
+    margin-bottom: 20px;
+
+    padding-right: 50px;
+  }
+  
+  .manager-section img {
+    border-radius: 3% !important;
+    width: 300px;
+  }
+}
+
+

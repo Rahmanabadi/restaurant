@@ -1,0 +1,138 @@
+html, body {
+    color: white;
+    background-color: rgb(30, 30, 35);
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+  }
+  
+  h1 {
+    margin-top: 50px;
+    margin-bottom: 0;
+    text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  h2 {
+    margin: 0;
+    opacity: 0.4;
+  }
+  
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel-wrapper {
+    display: flex;
+    position: relative;
+    max-width: 600px;
+    margin: 50px;
+  }
+  
+  .carousel {
+    overflow: hidden;
+    border-radius: 15px;
+  }
+  
+  .carousel ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 500%; 
+    transition: left 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+  
+  .carousel li {
+    flex: 1;
+  }
+  
+  .carousel img {
+    width: 100%;
+    border-radius: 15px;
+  }
+  
+  .nav-dot {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    cursor: pointer;
+    bottom: -30px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+    opacity: 0.5;
+  }
+  
+  .nav-dot:hover {
+    opacity: 0.8;
+    transform: scale(1.2);
+  }
+  
+  .nav-dot:active {
+    transform: scale(0.9);
+  }
+  
+  .left-arrow, .right-arrow {
+    display: none; 
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    z-index: 1;
+    font-size: 50px;
+    font-weight: bolder;
+    text-shadow: 0 0 7.5px rgba(0, 0, 0, 0.7);
+    opacity: 0.7;
+    transition: 0.2s;
+  }
+  
+  .left-arrow {
+    left: 15px;
+  }
+  
+  .right-arrow {
+    right: 15px;
+  }
+  
+  .left-arrow:hover, .right-arrow:hover {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  
+  .left-arrow:active, .right-arrow:active {
+    transform: scale(0.9);
+  }
+  
+  #slide1:checked ~ .carousel ul {
+    left: 0;
+  }
+  
+  #slide2:checked ~ .carousel ul {
+    left: -100%;
+  }
+  
+  #slide3:checked ~ .carousel ul {
+    left: -200%;
+  }
+  
+  #slide4:checked ~ .carousel ul {
+    left: -300%;
+  }
+  
+  #slide5:checked ~ .carousel ul {
+    left: -400%;
+  }
+  
+  #slide1:checked ~ .left-arrow[for=slide5],
+  #slide2:checked ~ .left-arrow[for=slide1],
+  #slide3:checked ~ .left-arrow[for=slide2],
+  #slide4:checked ~ .left-arrow[for=slide3],
+  #slide5:checked ~ .left-arrow[for=slide4],
+  #slide1:checked ~ .right-arrow[for=slide2],
+  #slide2:checked ~ .right-arrow[for=slide3],
+  #slide3:checked ~ .right-arrow[for=slide4],
+  #slide4:checked ~ .right-arrow[for=slide5],
+  #slide5:checked ~ .right-arrow[for=slide1] {
+    display: block;
+  }
+  

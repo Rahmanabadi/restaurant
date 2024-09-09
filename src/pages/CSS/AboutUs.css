@@ -1,0 +1,16 @@
+.aboutUs-container {
+    padding: 20px;
+    background-color: #f8f9fa;
+    background-image: url('dish2.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .aboutUs-content {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+  }
+  
